@@ -126,7 +126,11 @@
    margin-left: 1.5rem;
    display: flex;
    align-items: center;
-   /* justify-content: space-between; */
+}
+.sidebar .nav_menu_items .sub_nav_link:hover,
+.sidebar .nav_menu_items .sub_nav_link.active {
+   background: var(--light_dark);
+   border-right: 0.5rem solid var(--white);
 }
 .sidebar .nav_menu_items .sub_nav_link .sub_link_name {
    margin-left: 1.5rem;
@@ -142,7 +146,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: #1b1b31;
+   background: var(--light_dark);
    padding: 0.6rem 0;
    width: calc(200px + 2vw);
    transition: all 0.3s ease;
