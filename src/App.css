@@ -4,6 +4,7 @@
    --sidebar_bg: #11101d;
    --gray: #a4b2bc;
    --white: #fff;
+   --content_bg: #e4e9f7;
 }
 
 *,
@@ -20,4 +21,21 @@ html {
 }
 a {
    text-decoration: none;
+}
+.icon_color {
+   color: red;
+}
+.home_section,
+.dashboard_section {
+   position: relative;
+   background: var(--content_bg);
+   left: calc(200px + 2vw);
+   width: calc(100% - (200px + 2vw));
+   transition: all 0.3s ease;
+   height: 120vh;
+}
+.sidebar.close ~ .home_section,
+.sidebar.close ~ .dashboard_section {
+   left: 78px;
+   width: calc(100% - 78px);
 }

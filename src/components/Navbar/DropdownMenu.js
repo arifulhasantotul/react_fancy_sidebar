@@ -1,4 +1,5 @@
 import React from "react";
+import { IconContext } from "react-icons";
 import { NavLink } from "react-router-dom";
 
 const DropdownMenu = (props) => {
@@ -6,12 +7,12 @@ const DropdownMenu = (props) => {
 
    return (
       <>
-         <div>
+         <IconContext.Provider value={{ color: "#fff", size: "1.8rem" }}>
             <NavLink to={path} className={tClass}>
                {icon}
-               <span>{title}</span>
+               <span className="sub_link_name">{title}</span>
             </NavLink>
-         </div>
+         </IconContext.Provider>
       </>
    );
 };

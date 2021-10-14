@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as BiIcons from "react-icons/bi";
 import { IconContext } from "react-icons/lib";
+import pic from "../../images/picformal.png";
 import "./Navbar.css";
 import { SidebarData } from "./NavbarData";
 import SubMenu from "./SubMenu";
@@ -33,6 +34,22 @@ const Navbar = () => {
                      ))}
                   </ul>
                </IconContext.Provider>
+               <div className="profile_details">
+                  <div className="profile_content">
+                     <img src={pic} alt="" />
+                  </div>
+                  <div className="name_job">
+                     <div className="profile_name">Ariful Hasan</div>
+                     <div className="job">Web Developer</div>
+                  </div>
+                  <BiIcons.BiLogOut
+                     style={{
+                        width: "2rem",
+                        marginRight: "0.7rem",
+                        cursor: "pointer",
+                     }}
+                  />
+               </div>
             </nav>
          </IconContext.Provider>
       </>

@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
-import Shop from "./Pages/Shop/Shop";
 
 function App() {
    return (
@@ -16,8 +16,8 @@ function App() {
                <Route path="/home">
                   <Home></Home>
                </Route>
-               <Route exact path="/shop">
-                  <Shop></Shop>
+               <Route exact path="/dashboard">
+                  <Dashboard></Dashboard>
                </Route>
             </Switch>
          </Router>
