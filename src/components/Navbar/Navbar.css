@@ -1,0 +1,96 @@
+.toggle_btn {
+   background-color: #e4e9f7;
+   border: none;
+   width: 3.5rem;
+   height: 3.5rem;
+   border-radius: 50%;
+   margin: 0.5rem 0 0 0.5rem;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 10px;
+   z-index: 1000;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   margin-left: 2.7rem;
+}
+.toggle_btn::before,
+.toggle_btn::after {
+   position: absolute;
+   content: "";
+   background-color: #161616;
+   height: 0.25rem;
+   width: 1.5rem;
+   transition: all 0.4s ease;
+}
+.toggle_btn::before {
+   top: 1.3rem;
+}
+.toggle_btn::after {
+   bottom: 1.3rem;
+}
+.close.toggle_btn::before {
+   top: 50%;
+   transform: translateY(-50%) rotate(135deg);
+}
+.close.toggle_btn::after {
+   bottom: 50%;
+   transform: translateY(50%) rotate(-135deg);
+}
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   background: var(--sidebar_bg);
+   width: calc(200px + 2vw);
+   z-index: 999;
+   transition: all 0.5s ease;
+   padding: 5rem 0;
+}
+.sidebar.close {
+   width: 7.8rem;
+}
+.sidebar .sidebar_logo {
+   min-width: 7.8rem;
+   color: var(--white);
+   display: flex;
+   align-items: center;
+   text-align: center;
+   /* line-height: 10rem; */
+   margin-left: 2.7rem;
+   padding: 3rem 0 1.5rem 0;
+}
+.sidebar .sidebar_logo .logo_name {
+   font-size: 2rem;
+   font-weight: 600;
+   margin-left: 2rem;
+}
+.sidebar.close .sidebar_logo .logo_name {
+   display: none;
+}
+.sidebar .nav_menu_items {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-left: 2.7rem;
+}
+.sidebar .nav_menu_items .nav_link {
+   /* background: red; */
+   padding: 1.5rem 0;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.sidebar .nav_menu_items .nav_link .link_name {
+   font-size: 1.8rem;
+   margin-left: 3rem;
+   color: #fff;
+}
+.sidebar.close .nav_menu_items .nav_link .link_name {
+   display: none;
+}
+.sidebar .nav_menu_items .nav_link .arrow {
+   padding: 0 0.7rem;
+}
