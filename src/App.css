@@ -26,6 +26,7 @@ a {
 .icon_color {
    color: red;
 }
+.header,
 .home_section,
 .dashboard_section {
    position: relative;
@@ -35,6 +36,7 @@ a {
    transition: all 0.3s ease;
    height: 120vh;
 }
+.sidebar.close ~ .header,
 .sidebar.close ~ .home_section,
 .sidebar.close ~ .dashboard_section {
    left: 78px;
